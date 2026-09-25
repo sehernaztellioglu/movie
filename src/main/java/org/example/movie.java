@@ -7,6 +7,7 @@ public  class movie {
     String leadStudio;
     String genre;
     Integer score;
+    String isim;
 
 
 
