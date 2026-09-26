@@ -22,6 +22,8 @@ public class Main {
         }
     }
 
+
+
     public static void filmDosyaSiralaStudio(String studio){
         for (movie film : filmler) {
             if (film.leadStudio.trim().equalsIgnoreCase(studio.trim())){
@@ -29,6 +31,7 @@ public class Main {
             }
         }
     }
+
 
 
     public static void filmDosyasiniOku() {
@@ -44,6 +47,7 @@ public class Main {
                 String[] bilgiler = satir.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1);
                 movie film = new movie();
 
+
                 film.isim = bilgiler[0];
 
 
@@ -57,16 +61,7 @@ public class Main {
                 studiolar.add(film.leadStudio);
 
 
-
-
-
-
-
-
             }
-
-
-
 
 
         } catch (IOException e) {
@@ -90,11 +85,16 @@ public class Main {
 
         int secim = Integer.parseInt(scanner.nextLine());
 
+
         if (secim == 1) {
             System.out.println("Hangi yılın filmleri?");
 
             int year = Integer.parseInt(scanner.nextLine());
             filmDosyaSiralaYil(year);
+
+
+
+
         }else if (secim == 2) {
             for (String studio : studiolar) {
                 System.out.println(studio);
